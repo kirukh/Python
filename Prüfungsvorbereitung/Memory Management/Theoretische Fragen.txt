@@ -1,0 +1,45 @@
+Heap:
+Ist ein Dynamischer Speicher in dem dynamisch erzeugte Objekte abgelegt werden.
+Wird verwender für: Klasseninstanzen, Listen, Dictonaries, Alles was länger lebt als ein Funktionsaufruf
+Lebensdauer ist so lange bis der Garbage Collector ihn freigibt
+Wird geteilt bei Threads im selben Prozess
+Heap = Langfristiger Speicher – was "bleiben" sol
+
+Stack:
+Ist ein temporärer Speicherbereich für lokale Variablen, Funktionsaufrufe (Call Stack).
+Ist ein Kurzlebiger speicher (endet nach Funktionsausführung)
+Speicheort ist innerhalb eines Threads oder Prozesses
+Stack = Kurzfristiger Arbeitsspeicher – was "gerade läuft"
+
+Context:
+Ist der aktuelle Zustand eines Threads oder Prozesses:
+Stack-Position, Register, Program Counter, Lokale Variablen, Umgebung
+Der Context wird verwendet für Multithreading /Scheduling
+Context = Der "Gesamtzustand" des Programms an einem Punkt in der Zeit
+
+Profiling:
+systematisches Messen, wo (welche Funktionen/Zeilen) dein Programm Zeit oder Speicher verbraucht. Ziel: Hotspots finden & optimieren.
+Kann mit profiling modules wie z.B cProfiler getrackt werden.
+
+Time Measuring:
+einfaches Stoppen der Laufzeit eines (Teil‑)Codes, ohne detailliert aufzuschlüsseln, wo die Zeit verbrannt wurde.
+Einfach Zeitmessungen mit (timeit oder start = time.perf_counter() )
+
+Garbage Collection:
+Der Garbage Collector erkennt Objekte, die im Programm nicht mehr erreichbar sind, und löscht sie aus dem Speicher (Heap).
+Dieser benutzt 2 Arten um Garbage zu erkennen einmal
+Reference Counting:
+Jedes Objekt hat einen Zähler, des sagt wie viele Variablen auf es verweisen wenn dieser Zähler auf 0 fällt dann wird das Objekt sofort gelöscht.
+Zyklenerkennung:
+Problem: Zwei Objekte verweisen gegenseitig aufeinander, obwohl sie sonst nicht mehr erreichbar sind.
+Lösung: Der GC durchsucht zyklisch alle Objekte, um solche Fälle zu erkennen und aufzuräumen.
+Wieso benutzt man diesen? = Verhindert Memory Leaks und optimiert die Speicherauslastung
+
+Memory Allocation:
+Statisch = Speicher wird zur Compile-Zeit festgelegt (für Python kaum relevant, da Python dynamisch typisiert ist.)
+Dynamisch = Speicher wird zur Laufzeit angefordert (Python nutzt fast ausschließlich dynamische Zuweisung)
+Wie Python Speicher allokiert:
+Interpreter = Verwaltet eigene Speicherstrukturen
+Python- Objektlayer = Legt Objekte (Listen, Strings,Klassen etc.)an
+Memory Manager = Verwaltet Objekt-Speicher intern (Pools, Caches)
+OS-Level = Holt Speicher beim Betriebssystem, wenn nötig

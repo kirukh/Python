@@ -1,0 +1,19 @@
+app:
+  name: MeineWebApp
+  version: 1.2.3
+  debug: true
+
+database:
+  host: localhost
+  port: 5432
+  username: admin
+  password: geheim
+
+features:
+  - auth
+  - analytics
+  - email-support
+
+logging:
+  level: INFO
+  file: logs/app.log

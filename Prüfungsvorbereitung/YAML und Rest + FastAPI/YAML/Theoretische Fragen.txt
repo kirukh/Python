@@ -1,0 +1,7 @@
+Was ist YAML?:
+ist eine einfach zu lesende Datenserialisierungsformat, das oft in Konfigurationsdateien
+und bei der Datenübertragung verwendet wird. YAML wir oft dazu genutzt um Konfigurationen zu speichern
+und kann von jeder Programmiersprache gelesen werden.
+
+YAML basiert auf Einrückungen (wie Python) ist menschlich gut lesbar und kann Listen, Dictionaries,
+Strings , Zahle usw speichern kann.

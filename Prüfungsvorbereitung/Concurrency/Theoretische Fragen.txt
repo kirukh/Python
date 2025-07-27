@@ -1,0 +1,68 @@
+Unterschied Concurrency und Parallelism:
+Concurrency = bedeuted die Aufgaben sind logisch gleichzeitig aber nicht unbedingt parallel ablaufen
+              Während beispielsweise auf das lesen einer Datei gewartet wird, kann anderer Code ausgeführt werden.
+
+Parallelism = bedeuted wirklich mehrere Aufgaben zur selben Zeit auszuführen, typischerweise auf mehreren CPUs.
+
+Thread:
+Ein Thread ist eine leichte Einheit innerhalb eines Prozesses.
+Alle Threads in einem Prozess teilen sich denselben Speicherbereich (Heap), aber jeder Thread hat seinen eigenen Stack.
+
+Threads im Bezug auf Overhead:
+Sehr leichtgewichtig, weil sie keinen eigenen Adressraum benötigen.
+Schnell zu erstellen, aber benötigen Synchronisation (z. B. Locks), um Race Conditions zu vermeiden.
+
+Threads im Bezug auf Performance:
+Ideal für I/O-intensive Aufgaben (Dateizugriffe, Netzwerke).
+In Python durch den GIL (Global Interpreter Lock) aber nicht wirklich parallel bei CPU-lastiger Arbeit.
+
+Processe:
+Ein Prozess ist eine vollständige, eigenständige Einheit mit eigenem Speicherbereich.
+Mehrere Prozesse teilen keinen Speicher – Kommunikation läuft über Pipes, Queues, Shared Memory usw.
+
+Prozesse im Bezug auf Overhead:
+Größerer Overhead: Start eines Prozesses ist teurer als ein Thread.
+Aber: stabiler, weil Prozesse sich nicht gegenseitig kaputt machen können.
+
+Prozesse im Bezug auf Performance:    
+Ideal für CPU-intensive Aufgaben.    
+Kein GIL-Problem → Prozesse laufen wirklich parallel auf mehreren CPU-Kernen.
+
+Was ist GIL?:
+GIL = Global Interpreter Lock
+Ein mechanismusinterner Lock, den der Python-Interpreter (CPython) verwendet, um sicherzustellen, dass immer nur ein Thread gleichzeitig Python-Bytecode ausführt.
+
+Mutex:
+Ein Lock, der nur einem Thread erlaubt, eine kritische Sektion zu betreten.
+Blockiert alle anderen Threads, bis er wieder freigegeben wird.
+Mutex = Tür mit Schlüssel – nur 1 darf rein
+
+Semaphore:
+Ein Zähler, der mehreren Threads gleichzeitig den Zugang erlaubt – aber nur bis zu einem bestimmten Limit.
+Beispiel: Nur 3 Threads dürfen gleichzeitig in ein Netzwerk-Ressourcenpool.
+Semaphore = Club mit 5 Einlässen – aber bei 5 ist Schluss
+
+Queue:
+Eine Queue (Warteschlange) ist eine Thread-sichere Datenstruktur, bei der Elemente in der Reihenfolge verarbeitet werden
+in der sie eingefügt wurden (FIFO: First In, First Out).
+q.put(item)   | Fügt `item` zur Queue hinzu (wartet bei voller Queue) 
+q.get()       | Holt ein Element (wartet bei leerer Queue)            
+q.task_done() | Signalisiert, dass ein Job fertig ist                 
+q.join()      | Blockiert, bis alle Aufgaben erledigt sind            
+q.empty()     | Gibt `True` zurück, wenn Queue leer ist               
+q.full()      | Gibt `True` zurück, wenn Queue voll ist               
+
+
+Wann benutze ich was?:
+Nur 1 Thread darf etwas tun	Mutex (Lock)
+Nur 3 Threads dürfen gleichzeitig arbeiten	Semaphore
+Threads sollen Daten austauschen (z. B. Producer → Consumer)	Queue
+
+Multithreading:
+bedeutet, dass mehrere Threads innerhalb eines Prozesses parallel laufen und sich denselben Speicher teilen – gut für I/O-Aufgaben.
+
+Multiprocessing:
+nutzt mehrere Prozesse, die jeweils eigenen Speicher haben – ideal für CPU-intensive Aufgaben auf mehreren Kernen.
+
+Blocking Code:
+Ist Code der verhindert das Während dieser ausgeführt andere Teile des Programms ausgeführt werden können.

@@ -1,0 +1,30 @@
+Daten Typen in Python:
+
+int     -Ganze Zahlen
+float   -Fließkommazahlen
+str     -Text oder Zeichenkette
+bool    -Wahrheitswerte (True/False)
+list    -Liste von Werten
+tuple   -Unveränderliche Liste
+set     -Unsortierte Sammlung von eindeutigen Werten
+dict    -Wörterbuch, Schlüssel-Wert-Paare
+None    -Repräsentiert das Fehlen eines Wertes
+
+Unterschiede zwischen Lists und Dictonaries:
+list (geordnet, veränderbar, Zugriff über den Index, Duplikate, Liste von Werten)
+dict (geordnet, veränderbar, Zugriff über den Schlüssel, Schlüssel muss eindeutigen sein, Schlüssel-Wert-Paare)
+
+Was sind Module?:
+Ein Modul ist einfach eine .py-Datei mit Python-Code (Funktionen, Klassen, Variablen usw.).
+Du kannst ein Modul erstellen, importieren und in anderen Dateien benutzen.
+Warum Module?:
+Bessere Strukturierung des Codes
+Wiederverwendbarkeit von Funktionen
+Zugriff auf viele nützliche Standartfunktionen
+Verwendung von Fremd-Bibliotheken(z.B. numpy, pandas, matplotlib)
+Wie benutzt man Module?:
+import module (normaler import)
+from module import funktion (import einer speziellen Funktion eines Moduls)
+import module as mymodule (import eines modules unter bestimmtem Namen)
+Wie installiert man Module?:
+pip install module

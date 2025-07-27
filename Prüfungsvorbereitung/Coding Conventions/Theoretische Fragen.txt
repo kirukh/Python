@@ -1,0 +1,42 @@
+Was sind Coding Conventions?:
+sind empfohlene Richtlinien, wie man lesbaren, konsistenten und wartbaren Code schreibt.
+Diese Konventionen helfen Teams (und dir selbst) dabei, leichter zu verstehen, was ein Programm macht.
+
+Die wichtigste Convention für Python wäre PEP8:
+Es legt fest, wie Python-Code aussehen soll
+-Einrückung
+-Benennung von Variablen und Funktionen
+-Leerzeilen
+-Kommentare
+
+Was ist MVC?
+M = Model = Verwalten der Daten und Geschäftslogik
+V = View = Darstellung der Daten (UI)
+C = Controll = Vermittelt zwischen View und Model, reagiert auf Benutzerinteraktion
+
+Wo wird MVC verwender?
+Web-Frameworks wie Django, Ruby on Railsm etc.
+Desktop-GUIs wie Tkinter, JavaFX, Qt
+Mobile-Apps bei Android(teilweise), iOs (mit MVC-ähnlich)
+
+Wie funktionier MVC?
+Beispiel-Ablauf:
+1.Nutzer klickt auf einen Button -> Controller
+2. Controller verarbeitet die Eingabe -> ruft Methoden im Model
+3. Model gibt Daten zurück -> Controller übergibt sie an die View
+4. View zeigt die aktualisierten Daten im Browser / Fenster an
+
+Vorteile + :
+Änderung an der UI ohne die Logik zu Änderung
+Entwickler, Designer, Tester können parallel arbeiten
+Klarere Struktur, leichter zu testen und erweitern
+
+Nachteil - :
+Für kleine Projekte kann MVC übertrieben wirken
+Wenn nicht sauber umgesetzt (Enge Kopplung Controller-View)
+Einarbeitung für Einsteiger schwieriger
+
+Fazit:
+MVC ist ideal wenn du dein Projekt sauber trennen willst und es komplexer wird.
+In python kommt es oftr in Frameworks wie Django vor.
+Für kleinere skripte lohnt es sich oft nicht.

@@ -1,0 +1,2 @@
+What are Regular Expressions?
+sind ein leistungsstarkes Werkzeug, um Muster in Zeichenketten zu suchen, zu vergleichen, zu extrahieren oder zu verändern. Python stellt diese Funktionalität über das eingebaute Modul re bereit.

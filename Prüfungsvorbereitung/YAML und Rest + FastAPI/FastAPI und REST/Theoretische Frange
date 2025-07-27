@@ -1,0 +1,39 @@
+Was ist REST?
+ist ein Architekturprinzip für Web-APIs. Es definiert, wie Clients
+mit einem Server über HTTP kommunizieren.
+
+REST nutzt:
+HTTP-Methoden (GET, POST, PUT, DELETE)
+Arbeitet mir Ressourcen (z.B. /users/1)
+Ressourcen werden als JSON oder XML übertragen
+Stateless: Der SErver speichert keinen Zustand über Anfragen hinweg
+
+
+Beispiel für REST-Endpunkte:
+GET     /users      Alle Benutzer abrufen
+GET     /users/1    Benutzer mit ID 1 abrufen
+POST    /users      Neuen Benutzer erstellen
+PUT     /users/1    Benutzer mit ID 1 aktualisieren
+DELETE  /users/1    Benutzer mit ID 1 löschen
+
+
+
+Was ist FastAPI?:
+ist ein modernes Web-Framework für Python, das besonders gut für REST-APIs geeignet ist.
+
+Vorteil + :
+Extrem schnell
+Automatische  API-Dokumentation
+Einfache Input-Validation
+Async-fähig (perfekt für moderne Webanwendungen)
+
+Nachteile - :
+Relativ neu (Weniger Tutorial als bei Flask / Django)
+
+Zusammenfassung:
+REST ist ein Prinzip, wie APIs funktionieren: HTTP + Ressourcen + JSON
+FastAPI ist ein Python-Framework, um REST-APIs einfach zu bauen
+Verwende @app.get, @app.post usw. für Endpunkte
+Mit Pydantic definierst du Datenmodelle (z. B. User)
+FastAPI erzeugt automatisch Doku & prüft Eingaben
+Starte die App mit uvicorn main:app --reload
