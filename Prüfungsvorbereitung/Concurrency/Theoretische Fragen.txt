@@ -56,7 +56,7 @@ q.full()      | Gibt `True` zurück, wenn Queue voll ist
 Wann benutze ich was?:
 Nur 1 Thread darf etwas tun	Mutex (Lock)
 Nur 3 Threads dürfen gleichzeitig arbeiten	Semaphore
-Threads sollen Daten austauschen (z. B. Producer → Consumer)	Queue
+Threads sollen Daten austauschen (z. B. Producer → Consumer) Queue
 
 Multithreading:
 bedeutet, dass mehrere Threads innerhalb eines Prozesses parallel laufen und sich denselben Speicher teilen – gut für I/O-Aufgaben.

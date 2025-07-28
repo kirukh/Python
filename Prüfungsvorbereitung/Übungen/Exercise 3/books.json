@@ -1,0 +1,62 @@
+[
+  {
+    "titel": "Der alte Mann und das Meer",
+    "autor": "Ernest Hemingway",
+    "erscheinungsjahr": 1952,
+    "status": "available"
+  },
+  {
+    "titel": "1984",
+    "autor": "George Orwell",
+    "erscheinungsjahr": 1949,
+    "status": "available"
+  },
+  {
+    "titel": "Die Verwandlung",
+    "autor": "Franz Kafka",
+    "erscheinungsjahr": 1915,
+    "status": "available"
+  },
+  {
+    "titel": "Der Steppenwolf",
+    "autor": "Hermann Hesse",
+    "erscheinungsjahr": 1927,
+    "status": "available"
+  },
+  {
+    "titel": "Der kleine Prinz",
+    "autor": "Antoine de Saint-Exupéry",
+    "erscheinungsjahr": 1943,
+    "status": "available"
+  },
+  {
+    "titel": "Faust",
+    "autor": "Johann Wolfgang von Goethe",
+    "erscheinungsjahr": 1808,
+    "status": "available"
+  },
+  {
+    "titel": "Der Prozess",
+    "autor": "Franz Kafka",
+    "erscheinungsjahr": 1925,
+    "status": "available"
+  },
+  {
+    "titel": "Die Leiden des jungen Werthers",
+    "autor": "Johann Wolfgang von Goethe",
+    "erscheinungsjahr": 1774,
+    "status": "available"
+  },
+  {
+    "titel": "Effi Briest",
+    "autor": "Theodor Fontane",
+    "erscheinungsjahr": 1895,
+    "status": "available"
+  },
+  {
+    "titel": "Im Westen nichts Neues",
+    "autor": "Erich Maria Remarque",
+    "erscheinungsjahr": 1929,
+    "status": "available"
+  }
+]

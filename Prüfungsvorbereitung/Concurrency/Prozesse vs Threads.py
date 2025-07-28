@@ -13,13 +13,12 @@ def worker():
             counter += 1
 
 
-threads = [threading.Thread(target=worker) for _ in range(2)]
-
-for t in threads:
-    t.start()
-for t in threads:
-    t.join()
-
+t1 = threading.Thread(target=worker)
+t2 = threading.Thread(target=worker)
+t1.start()
+t2.start()
+t1.join()
+t2.join()
 print("Thread Counter:", counter)
 
 

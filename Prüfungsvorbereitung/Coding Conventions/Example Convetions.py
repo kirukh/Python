@@ -6,9 +6,8 @@ import numpy as np
 
 # import mein_modul
 
+
 # Einrückung (Indentation)
-
-
 def begrüßung(name):
     if name:
         print("Hallo", name)
